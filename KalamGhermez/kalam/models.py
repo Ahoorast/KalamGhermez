@@ -82,7 +82,9 @@ class Comment(QAC):
         return self.text
 
     
-#class VotesUsersRelations(models.Model):
-#    user = models.ForeignKey(User, on_delete=models.CASCADE)
-#    _QAC = models.ForeignKey(QAC, on_delete=models.CASCADE)
-    
+class UserVotes(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    _QAC = models.ForeignKey(QAC, on_delete=models.CASCADE)
+    voteType = models.BooleanField() # 0 if downvote 1 if upvote
+    class Meta:
+        unique_together = ('user', '_QAC', 'voteType')
