@@ -5,3 +5,4 @@ KalamGhermez/kalam/migrations/__pycache__/
 KalamGhermez/KalamGhermez/__pycache__/
 KalamGhermez/kalam/__pycache__/
 kalam/migrations/*
+kalam/migrations/0002_qac_qa_question_comment_answer.py
