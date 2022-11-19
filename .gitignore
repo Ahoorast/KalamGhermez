@@ -1,4 +1,6 @@
 env
 */__pycache__/*
 .env
-KalamGhermez/kalam/__pycache__/*
+KalamGhermez/kalam/migrations/__pycache__/
+KalamGhermez/KalamGhermez/__pycache__/
+KalamGhermez/kalam/__pycache__/

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir = "rtl">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">
+      ×
+      </button>
+      <strong>{{message}}</strong>
+    </div>
+ {% endfor %}
+{% endif %}
+
+<script type = "text/javascript" language = "javascript">
+    var page_num = 1;
+    $(document).ready(function() {
+        $("#load-more").click(function(){
+            var last_work_index = $('.work-row-data').length;
+            $.ajax({
+                url: "{% url 'users:loadMore' %}",
+                type: 'GET', 
+                data: {
+                    'last_work_index': last_work_index,
+                },
+                success: function(response) {
+                    const data = response.latest_work_list;
+                    data.map(work => {
+                        var id = work.id;
+                        var row_html = `<tr class="work-row-data">
+                                                        <th> ${work.title} </th>
+                                                        <th> ${work.price} هزار تومان</th>
+                                                        <th> ${work.show_estimate} </th>
+                                                        <th> ${work.employer} </th>`
+                        row_html += `<th> <a href="/users/job/${id}"> توضیحات </a> </th>`;
+                        row_html += `</tr>`
+                        $('.work-data').append(row_html);
+                    })
+                    if (data.length == 0) {
+                        $("#load-more").hide()
+                    }
+                },
+            });
+        });
+    });
+ </script>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="main-content" class="col-md-9">
+            <center><h1>سامانه‌ی انجام کار</h1></center>
+            <table class="table table-striped" dir="rtl">
+                <thead>
+                <tr>
+                    <th>عنوان کار</th>
+                    <th>ارزش کار</th>
+                    <th>تخمین زمانی</th>
+                    <th>صاحب کار</th>
+                    <th>توضیحات</th>
+                </tr>
+                </thead>
+                <tbody class="work-data">
+                {% if latest_work_list %}
+                    {% for work in latest_work_list %}
+                        <tr class="work-row-data">
+                            <th> {{work.title}} </th>
+                            <th> {{work.price}} هزار تومان</th>
+                            <th> {{work.show_estimate}} </th>
+                            <th> {{work.employer}} </th>
+                            <th> <a href="{% url 'users:details' work.id %}"> توضیحات </a> </th>
+                        </tr>   
+                    {% endfor %}
+                {% else %}
+                    <p>No users are available.</p>
+                {% endif %}
+                </tbody>
+            </table>
+            <center><buttun class="btn btn-default btn block" id="load-more">بیشتر...</buttun></center>
+            <div id="tasks-paginator" dir="ltr">
+                <ul class="pagination">
+                    {% for page in page_num_list %}
+                            {% if page != current_page %}
+                        <li><a href="{% url 'users:index_by_page' page %}">{{page}}</a></li>
+                        {% else %}
+                        <li class="active"><a href="{% url 'users:index_by_page' page %}">{{page}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% if logged_in == 0%}
+        <div class="col-md-3" dir="rtl">
+            <h3> ورود </h3>
+            <form action="{% url 'users:login' %}" method="post">
+            {% csrf_token %} 
+                <div class="form-group">
+                    <input type="username" class="form-control" name="username" placeholder="نام‌کاربری">
+                    <input type="password" class="form-control" name="password" placeholder="رمز">  
+                </div>
+                <button class="btn btn-default btn-block">ورود</button>
+            </form>
+            <hr/>
+            <h3>ثبت نام</h3>
+            <form action="{% url 'users:signup' %}" method="post">
+            {% csrf_token %}
+                <div class="form-group">
+                    <input name="username" maxlength="100" class="form-control" placeholder="نام‌کاربری">
+                </div>
+                <div class="form-group">
+                    <input name="email" class="form-control" placeholder="ایمیل" type="email">
+                </div>
+                <div class="form-group">
+                    <input name="password" class="form-control" placeholder="رمزعبور" type="password">
+                </div>
+                <div class="form-group">
+                    <input name="password_rpt" class="form-control" placeholder="تکرار رمز عبور" type="password">
+                </div>
+                <div class="form-group">
+                    <label><input name="master" type="checkbox">کارفرما</label>
+                </div>
+                <button class="btn btn-default btn-block">ثبت نام</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="col-md-3" dir="rtl">
+            <h3>شما با  {{user.username}} وارد شدید</h3>
+            {% if cuser.isEmployer == True %}
+                <a class="btn btn-default btn-block" href="{% url 'users:addWork' %}">اضافه کردن کار</a>
+            {% endif %}
+            <a class="btn btn-default btn-block" href="{% url 'users:logout' %}">خروج</a>
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+        <hr/>
+        <span> درباه‌ی ما</span>
+        <span>قوانین</span>
+    </footer>
+</div>
+</body>
+</html>
