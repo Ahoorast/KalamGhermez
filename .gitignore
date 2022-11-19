@@ -4,3 +4,4 @@ env
 KalamGhermez/kalam/migrations/__pycache__/
 KalamGhermez/KalamGhermez/__pycache__/
 KalamGhermez/kalam/__pycache__/
+kalam/migrations/*
