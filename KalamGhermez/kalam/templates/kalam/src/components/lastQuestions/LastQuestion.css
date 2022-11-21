@@ -1,0 +1,46 @@
+.lastquestion {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 30px auto;
+}
+
+.lastquestion__post {
+	position: relative;
+	width: 90%;
+	height: 250px;
+	border: 1px solid #ccc;
+	margin-top: 4px;
+        padding: 5px 15px;	
+}
+
+.inf {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1px 15px;
+}
+
+.showmore {
+	width: 90%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px 0;
+	border: 1px solid #ccc;
+}
+
+
+.paragraph {
+	height: 40%;
+	overflow: hidden;
+}
