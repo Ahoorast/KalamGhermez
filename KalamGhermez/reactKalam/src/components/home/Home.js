@@ -8,14 +8,13 @@ import './Home.css';
 const Header = () => {
 
 	return(
-		<Router>
 			<div className="header">
 				<div className="header__nav">
 					<div className="header__nav-right">
 						<input type="text" placeholder="Search..."/>
 						<div className="header__nav-btns">
-							<Link to="/login">Login</Link>
-							<Linnk to="/signup">Signup</Link>
+							<Link to="/login" className="header__nav-links">Login</Link>
+							<Linnk to="/signup" className="header__nav-links">Signup</Link>
 						</div>
 					</div>
 				</div>
@@ -25,7 +24,6 @@ const Header = () => {
 				<div className="header__ssection">
 				</div>
 			</div>
-		</Router>
 	);
 
 }

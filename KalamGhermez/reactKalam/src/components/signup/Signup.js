@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Signup.css';
 
 const Signup = (props) => {
@@ -79,7 +80,7 @@ const Signup = (props) => {
 								<p>I'm agree with policies</p>
 							</div>
 							<div className="signup-page__haveaccount">
-								<p>Have Account?</p>
+								<Link to="/login">Have Account?</Link>
 							</div>
 						</div>
 					</div>

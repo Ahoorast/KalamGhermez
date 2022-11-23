@@ -1,6 +1,6 @@
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -18,18 +18,11 @@ function App() {
   }
   return (
     <Router>
-      <Switch>
-        <Route path="/">
-          <Home></Home>
-        </Route>
-        <Route path="/signup">
-          <Signup onAddUser={onAddUserHandler}></Signup>
-        </Route>
-
-        <Route path="/login">
-	       <Login></Signup>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home/>} exact/>
+        <Route path="/signup" element={<Signup onAddUser={onAddUserHandler}/>} exact/>
+        <Route path="/login" element={<Login/>} exact/>
+      </Routes>
     </Router>
   );
 }
