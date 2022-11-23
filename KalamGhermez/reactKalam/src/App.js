@@ -17,7 +17,7 @@ function App() {
     console.log(content);
   }
 
-  const onCheckLoginHandler = (contnet) => {
+  const onCheckLoginHandler = (content) => {
     console.log(content);
   }
 

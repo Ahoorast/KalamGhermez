@@ -1,27 +1,108 @@
 .login {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+width: 100vw;
+height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
 }
+@media only screen and  (min-width: 800px){
 
 .login__img {
-  position: relative;
-  left: 0;
-  width: 60%;
-  height: 100%;
+position: relative;
+left: 0;
+width: 60%;
+height: 100%;
 }
 
 .login__img img {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 }
 
 .login__form-page {
-  width: 40%;
+width: 40%;
+height: 100%;
+display: relative;
+right: 0;
+}
+
+.login__form {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+position: relative;
+}
+
+.login__form-inputs {
+width: 80%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+
+.login__form-inputs input {
+width: 100%;
+height: 34px;
+padding: 3px 8px;
+border: 1px solid #ddd;
+border-radius: 4px;
+margin-top: 10px
+}
+
+.login__form-inf {
+width: 80%;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+color: #ccc;
+font-size: 10px;
+}
+
+.login__form-btn {
+width: 80%;
+max-width: 470px;
+height: 32px;
+border: 1px solid blue;
+color: #fff;
+letter-spacing: 1px;
+font-weight: bold;
+background: blue;
+margin-top: 20px;
+cursor: pointer;
+}
+
+.login__form h1 {
+position: absolute;
+top: 30px;
+}
+
+.login__form h2 {
+color: blue;
+position: relative;
+bottom: 10px;
+}
+
+.error {
+color: red;
+font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 800px) {
+.login__img {
+  display: none;
+}
+
+.login__form-page {
+  width: 100%;
   height: 100%;
   display: relative;
   right: 0;
@@ -39,6 +120,7 @@
 
 .login__form-inputs {
   width: 80%;
+  max-width: 470px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +164,15 @@
   top: 30px;
 }
 
+.login__form h2 {
+  color: blue;
+  position: relative;
+  bottom: 10px;
+}
+
 .error {
   color: red;
   font-size: 10px;
+}
+
 }
