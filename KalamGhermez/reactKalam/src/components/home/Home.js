@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './Home.css';
 
-const Header = () => {
+const Home = () => {
 
 	return(
 			<div className="header">
@@ -26,4 +26,4 @@ const Header = () => {
 }
 
 
-export default Header;
+export default Home;

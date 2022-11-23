@@ -74,17 +74,16 @@ const Signup = (props) => {
 						<input type="email" placeholder="Email" onChange={emailCahngeHandler} onBlur={check} style={{borderColor: emailColor}}/>
 						<input type="Password" placeholder="Password" onChange={passwordChangeHandler} onBlur={check} style={{borderColor: passwordColor}}/>
 						<input type="password" placeholder="confirm password" onChange={confirmPasswordCahngeHandler} onBlur={check} style={{borderColor: passwordColor}}/>
-						<div className="signup-page__inf">
-							<div className="signup-page__policy">
-								<input type="checkbox"/>
-								<p>I'm agree with policies</p>
-							</div>
-							<div className="signup-page__haveaccount">
-								<Link to="/login">Have Account?</Link>
-							</div>
+					</div>
+					<div className="signup-page__inf">
+						<div className="signup-page__policy">
+							<input type="checkbox"/>
+							<p>I'm agree with policies</p>
+						</div>
+						<div>
+							<Link to="/login" className="signup-page__haveaccount">Have Account?</Link>
 						</div>
 					</div>
-
 					<button>Signup</button>
 				</form>
 			</div>

@@ -49,11 +49,12 @@
 }
 
 
-.header__nav-links {
+.header__nav-links, .header__nav-links:active {
 	padding: 3px 9px;
 	height: 28px;
 	width: 50%;
 	height: 35px;
+	text-decoration: none;
 	background: #ab183a;
 	border: 1px solid #82082c;
 	color: #fff;
@@ -68,14 +69,14 @@
 
 }
 
-@@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 
 
 .header__nav {
 	border-top: 5px solid #82082c;
 	background: #fff;
 	position: absolute;
-	top: 20px;
+	top: 30px;
 	width: 100%;
 	height: 66px;
 	border-bottom: 1px solid #ddd;
@@ -91,33 +92,36 @@
 	right: 2px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	width: 100%;
+	justify-content: flex-end;
+	width: 60%;
 	height: 100%;
 }
 
 .header__nav-right input {
-	width: 80%;
+	width: 40%;
 	padding: 3px 10px;
 	margin: 2px;
 	height: 35px;
+	position: relative;
 }
 
-.header__nav-right.signup {
+.header__nav-links.signup {
 	display: none;
 }
 .header__nav-btns {
-	width: 14%;
+	position: relative;
+	width: 20%;
+	margin-left: 4px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 
-.header__nav-links {
+.header__nav-links, .header__nav-links:active {
+	text-decoration: none;
 	padding: 3px 9px;
 	height: 28px;
-	width: 50%;
 	height: 35px;
 	background: #ab183a;
 	border: 1px solid #82082c;
@@ -129,6 +133,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: absolute;
+	right: 0;
+
 }
 
 }

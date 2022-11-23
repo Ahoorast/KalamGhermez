@@ -9,6 +9,50 @@
 	padding: 40px;
 }
 
+
+.signup-page__inf {
+	width: 90%;
+	max-width: 470px;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+ .signup-page__policy {
+	 font-size: 6px;
+	 color: #ccc;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: row;
+ }
+
+ .signup-page__policy input {
+	 width: 1px;
+	 height: 1px;
+	 margin-right: 3px;
+	 color: #ccc;
+	 font-size: 6px;
+ }
+
+ .signup-page__haveaccount, .signup-page__haveaccount:active {
+		font-size: 8px;
+		color: #ccc;
+		text-decoration: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+ }
+
+ .error {
+	 font-size: 10px;
+	 color: red;
+ }
+
 @media only screen and (min-width: 800px){
 .square-top {
 	width: 130px;
@@ -98,50 +142,6 @@
 	width: 50%;
 }
 
-.signup-page__inf {
-	width: 90%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-}
-
- .signup-page__policy {
-	 font-size: 8px;
-	 color: #ccc;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 flex-direction: row;
-	 position: absolute;
-	 left: 0;
-	 bottom: -15px;
- }
-
- .signup-page__policy input {
-	 width: 12px;
-	 height: 12px;
-	 color: #ccc;
- }
-
- .signup-page__haveaccount {
-		position: absolute;
-		font-size: 8px;
-		color: #ccc;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		right: 0;
-		bottom: -8px;
- }
-
- .error {
-	 font-size: 10px;
-	 color: red;
- }
 }
 
 @media only screen and (max-width: 800px){
@@ -223,48 +223,4 @@
 	width: 50%;
 }
 
-.signup-page__inf {
-	width: 90%;
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	flex-direction: column;
-}
-
- .signup-page__policy {
-	 font-size: 8px;
-	 color: #ccc;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 flex-direction: row;
-	 position: absolute;
-	 left: 0;
-	 bottom: -15px;
- }
-
- .signup-page__policy input {
-	 width: 12px;
-	 height: 12px;
-	 color: #ccc;
- }
-
- .signup-page__haveaccount {
-		position: absolute;
-		font-size: 8px;
-		color: #ccc;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		right: 0;
-		bottom: -8px;
- }
-
- .error {
-	 font-size: 10px;
-	 color: red;
- }
 }
