@@ -13,15 +13,20 @@ import Login from './components/login/Login';
 
 function App() {
 
-  const onAddUserHandler = (content) =>{
+  const onAddUserHandler = (content) => {
     console.log(content);
   }
+
+  const onCheckLoginHandler = (contnet) => {
+    console.log(content);
+  }
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} exact/>
         <Route path="/signup" element={<Signup onAddUser={onAddUserHandler}/>} exact/>
-        <Route path="/login" element={<Login/>} exact/>
+        <Route path="/login" element={<Login onCheckLogin={onCheckLoginHandler}/>} exact/>
       </Routes>
     </Router>
   );

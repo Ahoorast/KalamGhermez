@@ -74,9 +74,15 @@
   font-weight: bold;
   background: blue;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .login__form h1 {
   position: absolute;
   top: 30px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
 }
