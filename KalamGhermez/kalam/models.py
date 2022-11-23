@@ -88,3 +88,11 @@ class UserVotes(models.Model):
     voteType = models.BooleanField() # 0 if downvote 1 if upvote
     class Meta:
         unique_together = ('user', '_QAC', 'voteType')
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=10)
+    description = models.CharField(max_length=100)
+    questions = models.ManyToManyField(Question)
+    def __str__(self):
+        return self.name
