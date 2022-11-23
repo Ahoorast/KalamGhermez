@@ -7,6 +7,16 @@ align-items: center;
 justify-content: center;
 flex-direction: row;
 }
+
+.login__form-inf-link, .login__form-inf-link:active {
+  text-decoration: none;
+  color: #000;
+}
+.login__form-btn-link, .login__form-link:active {
+
+    text-decoration: none;
+    color: #fff;
+}
 @media only screen and  (min-width: 800px){
 
 .login__img {

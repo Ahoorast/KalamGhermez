@@ -6,8 +6,8 @@ import login from './img/login.jpg';
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
-  const [validEmail, setValidEmail] = useState(false);
-  const [validPassword, setValidPassword] = useState(false);
+  const [validEmail, setValidEmail] = useState(true);
+  const [validPassword, setValidPassword] = useState(true);
 
 
   const onEmailChangeHandler = (event) => {
@@ -44,6 +44,7 @@ const Login = (props) => {
       <div className="login__form-page">
         <form className="login__form" onSubmit={onSubmitHandler}>
             <h1>Welcome Back!</h1>
+            <h2>Login</h2>
             { !validEmail && <p className="error">Email is not valid</p>}
             { !validPassword && <p className="error">Password is not correct</p>}
             <div className="login__form-inputs">
@@ -54,7 +55,7 @@ const Login = (props) => {
               <Link to="/forgotpassword" className="login__form-inf-link">Forgot password</Link>
               <Link to="/signup" className="login__form-inf-link">Signup</Link>
             </div>
-          <button className="login__form-btn">Login</button>
+          <button className="login__form-btn"><Link to="/" className="login__form-btn-link">Login</Link></button>
         </form>
       </div>
     </div>
