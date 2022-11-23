@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Home.css';
 
 const Header = () => {
@@ -14,7 +11,7 @@ const Header = () => {
 						<input type="text" placeholder="Search..."/>
 						<div className="header__nav-btns">
 							<Link to="/login" className="header__nav-links">Login</Link>
-							<Link to="/signup" className="header__nav-links">Signup</Link>
+							<Link to="/signup" className="header__nav-links signup">Signup</Link>
 						</div>
 					</div>
 				</div>
