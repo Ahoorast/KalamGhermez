@@ -14,7 +14,7 @@ const Header = () => {
 						<input type="text" placeholder="Search..."/>
 						<div className="header__nav-btns">
 							<Link to="/login" className="header__nav-links">Login</Link>
-							<Linnk to="/signup" className="header__nav-links">Signup</Link>
+							<Link to="/signup" className="header__nav-links">Signup</Link>
 						</div>
 					</div>
 				</div>
