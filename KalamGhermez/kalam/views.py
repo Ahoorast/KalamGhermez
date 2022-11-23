@@ -18,6 +18,9 @@ def signupView(request):
         email = request.POST['email']
         password = request.POST['password']
         #passwordRepeat = request('passwordRepeat')
+        if User.objects.get(username=username):
+            messages.error(request, 'username has already been taken')
+            #return HttpResponseRedirect(reverse('kalam:index'))
         user = User.objects.create_user(username, email, password)
         user.is_active = False
         user.save()
