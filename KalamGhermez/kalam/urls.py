@@ -17,5 +17,7 @@ urlpatterns = [
     #path('addjob/', views.addWork, name='addWork'),
     #path('assignjob/<int:work_id>', views.assignJobToUser, name='assignJob'),
     #path('load/', views.loadMore, name="loadMore")
-    path('signup/', views.index, name='index')
+    #path('signup/', views.index, name='index'),
+    path('signup/', views.signupView, name='signup'),
+    path('login/', views.loginView, name='login')
 ]
