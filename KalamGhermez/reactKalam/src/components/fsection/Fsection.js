@@ -1,4 +1,6 @@
 import React from 'react';
+import { BiSearchAlt } from "react-icons/bi";
+import { MdPersonSearch } from 'react-icons/md';
 import './Fsection.css';
 
 const Fsection = () => {
@@ -6,6 +8,7 @@ const Fsection = () => {
     <div className="fsection">
       <div className="subscribe-cards">
         <div className="subscribe">
+        <BiSearchAlt className="icon"/>
           <p>
             find the best answer to your queastions,
             find the smartest way to learn,
@@ -14,6 +17,7 @@ const Fsection = () => {
           <button>Join Us</button>
         </div>
         <div className="subscribe teams">
+          <MdPersonSearch className="icon"/>
           <p>
             do you want to find teams?
             do you want to find best people?

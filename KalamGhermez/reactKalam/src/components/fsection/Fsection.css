@@ -28,6 +28,7 @@ h1 {
   flex-direction: row;
 }
 
+
 .subscribe {
   margin-top: 12px;
   margin-right: 6px;
@@ -41,9 +42,13 @@ h1 {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  background: #43ace6;
+  background: linear-gradient(#43ace6, #ddd);
 }
 
+.icon {
+  width: 50px;
+  height: 50px;
+}
 .subscribe p {
   width: 70%;
   height: 70%;
@@ -72,7 +77,7 @@ h1 {
 }
 
 .subscribe.teams{
-  background: #e8b320;
+  background: linear-gradient(#e8b320, #ddd);
   border-color: #e8b320;
 }
 
