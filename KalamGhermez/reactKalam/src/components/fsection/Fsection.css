@@ -1,0 +1,158 @@
+.fsection {
+  	width: 90%;
+    margin-top: 30px;
+    background: #272b2e;
+  	position: relative;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	flex-direction: column;
+    border-radius: 10px;
+}
+
+h1 {
+  margin-top: 60px;
+}
+
+.fsection h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.subscribe {
+  margin-top: 12px;
+  margin-right: 6px;
+  width: 40%;
+  min-width: 350px;
+  height: 500px;
+  border: 1px solid #43ace6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #43ace6;
+}
+
+.subscribe p {
+  width: 70%;
+  height: 70%;
+  font-size: 25px;
+  line-height: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+}
+
+
+
+.subscribe button {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  padding: auto;
+  font-weight: bold;
+  color: #fff;
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+.subscribe.teams{
+  background: #e8b320;
+  border-color: #e8b320;
+}
+
+.plans {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  width: 44%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.plan h2 {
+  position: relative;
+  top: 20px;
+  padding: 5px 20px;
+  background: #e8b320;
+}
+
+.plan ul {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  width: 90%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.plan button {
+  width: 40%;
+  cursor: pointer;
+  min-width: 170px;
+  height: 40px;
+  padding: 3px auto;
+  position: relative;
+  bottom: 10px;
+  background: #e8b320;
+  font-weight: bold;
+  border: 1px solid #e8b320;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 600px){
+  .subscribe-cards {
+    flex-direction: column;
+  }
+  .subscribe {
+    width: 90%;
+    margin-top: 8px;
+    min-width: 80%;
+    height: 400px;
+  }
+
+  .subscribe p {
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.4rem;
+  }
+
+  .subscribe button {
+    width: 170px;
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+  .plan {
+    width: 90%;
+  }
+}

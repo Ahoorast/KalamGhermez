@@ -2,29 +2,8 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	flex-direction: column;
-	width: 100vw;
-}
-
-
-.header__fsection {
-	width: 100%;
-	height: 100vh;
-	margin: 30px auto;
-  background: #2e58d9;
-	position: relative;
-	color: #fff;
-	display: flex;
-	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	width: 100vw;
 
-}
-
-
-
-.header__ssection: {
-	width: 90%;
-	background: ##2e58d9;
 }

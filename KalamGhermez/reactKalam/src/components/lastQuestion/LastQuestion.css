@@ -1,19 +1,28 @@
+.sidebar-left {
+	width: 10%;
+	height: 100vh;
+	position: relative;
+}
+
+
 .lastquestion {
+	position: relative;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	margin: 30px auto;
 }
 
 .lastquestion__post {
 	position: relative;
-	width: 90%;
+	width: 80%;
 	height: 250px;
 	border: 1px solid #ccc;
 	margin-top: 4px;
-        padding: 5px 15px;	
+	padding: 5px 15px;
 }
 
 .inf {
@@ -30,7 +39,7 @@
 }
 
 .showmore {
-	width: 90%;
+	width: 80%;
 	height: 30px;
 	display: flex;
 	align-items: center;
@@ -43,4 +52,9 @@
 .paragraph {
 	height: 40%;
 	overflow: hidden;
+}
+
+.sidebar-right {
+	width: 10%;
+	height: 100vh;
 }

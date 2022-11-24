@@ -4,8 +4,8 @@
 .header__nav {
 	border-top: 5px solid #2e58d9;
 	background: #fff;
-	position: absolute;
-	top: 20px;
+	position: relative;
+	/* top: 20px; */
 	width: 100%;
 	height: 66px;
 	border-bottom: 1px solid #ddd;
@@ -91,8 +91,8 @@
 .header__nav {
 	border-top: 5px solid #ebb55e;
 	background: #fff;
-	position: absolute;
-	top: 30px;
+	position: relative;
+	/* top: 20px; */
 	width: 100%;
 	height: 56px;
 	border-bottom: 1px solid #ddd;

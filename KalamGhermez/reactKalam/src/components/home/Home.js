@@ -1,5 +1,8 @@
 import React from 'react';
 import Header from '../header/Header';
+import Fsection from '../fsection/Fsection';
+import Ssection from '../ssection/Ssection';
+import Footer from '../footer/Footer';
 import './Home.css';
 
 const Home = () => {
@@ -7,11 +10,9 @@ const Home = () => {
 	return(
 			<div className="home">
 				<Header />
-				<div className="header__fsection">
-					<h1>ASK YOUR QUESTIONS!</h1>
-				</div>
-				<div className="header__ssection">
-				</div>
+				<Fsection />
+		    <Ssection />
+        <Footer/>
 			</div>
 	);
 
