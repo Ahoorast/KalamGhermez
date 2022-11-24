@@ -49,6 +49,23 @@ h1 {
   width: 50px;
   height: 50px;
 }
+
+.title {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title__special {
+  color: orange;
+}
+
 .subscribe p {
   width: 70%;
   height: 70%;
@@ -90,7 +107,7 @@ h1 {
 }
 
 .plan {
-  width: 44%;
+  width: 34%;
   height: 400px;
   display: flex;
   align-items: center;
@@ -101,6 +118,38 @@ h1 {
   color: #000;
   border-radius: 20px;
   margin: 10px;
+}
+
+.plan:hover {
+  box-shadow: 3px 3px 3px #ddd;
+}
+
+.community__inf {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.community__inf-card {
+  width: 22%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 3px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.community__inf-card:hover {
+  background: blue;
 }
 
 .plan h2 {
@@ -133,7 +182,72 @@ h1 {
   border: 1px solid #e8b320;
   border-radius: 4px;
 }
+
+.companies {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.companies__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 9px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+h1{
+  margin-top: 45px;
+}
+
+.companies__card:hover {
+  background: pink;
+}
+
+.comments{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.comments__card {
+  width: 34%;
+  height: 300px;
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  margin: 7px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #000;
+  border-top: 5px solid orange;
+}
+
 @media only screen and (max-width: 600px){
+/*
+  .companies {
+    overflow-x: scroll;
+  } */
+  .community__inf {
+    flex-direction: column;
+  }
+
+  .community__inf-card {
+    width: 90%;
+  }
+
   .subscribe-cards {
     flex-direction: column;
   }
