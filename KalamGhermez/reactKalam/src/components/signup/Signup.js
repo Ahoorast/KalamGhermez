@@ -46,7 +46,6 @@ const Signup = (props) => {
 			setPasswordColor('salmon');
 	}
 	async function onSubmitHandler(event){
-		event.preventDefault();
 		const userData =  {
 			username: enteredUsername,
 			email: enteredEmail,
