@@ -7,4 +7,5 @@ from . import views
 app_name = 'kalam'
 
 urlpatterns = [
+    path('signup/', views.signupView, name="signup")
 ]

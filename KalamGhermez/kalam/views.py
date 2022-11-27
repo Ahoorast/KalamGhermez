@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 from .tokens import account_activation_token
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_str
-
+ 
 #from django.views import generic
 #from django.contrib.auth.forms import UserCreationForm
 #from django.contrib.auth.hashers import make_password, check_password
@@ -54,6 +54,10 @@ def activate(request, uidb64, token):
         messages.success(request, 'Thank you for your email confirmation. Now you can login your account.')
     else:
         messages.error(request, 'Activation link is invalid!')
+
+
+def signupView(request):
+    return render(request, 'index.html')
 
 """
 # needs work
