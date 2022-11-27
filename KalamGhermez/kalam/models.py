@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User as DjangoUser
+from django.contrib.auth.models import User
 from django_quill.fields import QuillField
 from datetime import datetime
 
@@ -15,8 +15,8 @@ class Education(models.Model):
     def __str__(self):
         return self.place
 
-class User(models.Model):
-    user = models.OneToOneField(DjangoUser, on_delete=models.CASCADE)
+class UserData(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.user.username
 

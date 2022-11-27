@@ -18,7 +18,8 @@ from django.utils.encoding import force_bytes, force_str
 # Create your views here.
 
 # needs work
-def sendActivationEmail(request, user): 
+def sendActivationEmail(request, username): 
+    user = User.objects.get(username=username)
     mail_subject = 'Activate your user account.'
     message = render_to_string('../templates/activate_email.html', {
         'user': user.username,
@@ -51,12 +52,12 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         messages.success(request, 'Thank you for your email confirmation. Now you can login your account.')
-        return signupView(request) # probably would need modification later
     else:
         messages.error(request, 'Activation link is invalid!')
-        return loginView(request) # probably would need modification later
 
+"""
 # needs work
+
 def signupView(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -75,7 +76,6 @@ def signupView(request):
         pass
         #form = SignUpForm
     return render(request, 'index.html')
-
 # needs work
 def loginView(request):
     if request.method == 'POST':
@@ -94,3 +94,4 @@ def loginView(request):
     else:
         pass
     return render(request, 'login.html')
+"""

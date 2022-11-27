@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import User, UsersEducations, UsersOrganisations, Organization, Education, Question, Answer, Comment, UserVotes, Tag
+from .models import UserData, UsersEducations, UsersOrganisations, Organization, Education, Question, Answer, Comment, UserVotes, Tag
 
 # Register your models here.
-admin.site.register(User)
+admin.site.register(UserData)
 admin.site.register(UsersEducations)
 admin.site.register(UsersOrganisations)
 admin.site.register(Organization)
