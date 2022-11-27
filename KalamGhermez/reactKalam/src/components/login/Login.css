@@ -6,6 +6,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: row;
+/* background: #846dd1 ;*/
 }
 
 .login__form-inf-link, .login__form-inf-link:active {
@@ -17,6 +18,13 @@ flex-direction: row;
     text-decoration: none;
     color: #fff;
 }
+
+.login__form h1 {
+position: absolute;
+top: 30px;
+color: #232ca8;
+}
+
 @media only screen and  (min-width: 800px){
 
 .login__img {
@@ -80,22 +88,17 @@ font-size: 10px;
 width: 80%;
 max-width: 470px;
 height: 32px;
-border: 1px solid blue;
+border: 1px solid #232ca8;
 color: #fff;
 letter-spacing: 1px;
 font-weight: bold;
-background: blue;
+background: #232ca8;
 margin-top: 20px;
 cursor: pointer;
 }
 
-.login__form h1 {
-position: absolute;
-top: 30px;
-}
-
 .login__form h2 {
-color: blue;
+color: #232ca8;
 position: relative;
 bottom: 10px;
 }
@@ -162,11 +165,11 @@ font-size: 10px;
   width: 80%;
   max-width: 470px;
   height: 32px;
-  border: 1px solid blue;
+  border: 1px solid #232ca8;
   color: #fff;
   letter-spacing: 1px;
   font-weight: bold;
-  background: blue;
+  background: #232ca8;
   margin-top: 20px;
   cursor: pointer;
 }

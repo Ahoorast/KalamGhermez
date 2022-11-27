@@ -1,0 +1,277 @@
+.fsection {
+  	width: 90%;
+    margin-top: 30px;
+    background: #272b2e;
+  	position: relative;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	flex-direction: column;
+    border-radius: 10px;
+}
+
+h1 {
+  margin-top: 60px;
+}
+
+.fsection h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.subscribe {
+  margin-top: 12px;
+  margin-right: 6px;
+  width: 40%;
+  min-width: 350px;
+  height: 500px;
+  border: 1px solid #43ace6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: linear-gradient(#43ace6, #ddd);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title__special {
+  color: orange;
+}
+
+.subscribe p {
+  width: 70%;
+  height: 70%;
+  font-size: 25px;
+  line-height: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+}
+
+
+
+.subscribe button {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  padding: auto;
+  font-weight: bold;
+  color: #fff;
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+.subscribe.teams{
+  background: linear-gradient(#e8b320, #ddd);
+  border-color: #e8b320;
+}
+
+.plans {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  width: 34%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.plan:hover {
+  box-shadow: 3px 3px 3px #ddd;
+}
+
+.community__inf {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.community__inf-card {
+  width: 22%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 3px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.community__inf-card:hover {
+  background: blue;
+}
+
+.plan h2 {
+  position: relative;
+  top: 20px;
+  padding: 5px 20px;
+  background: #e8b320;
+}
+
+.plan ul {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  width: 90%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.plan button {
+  width: 40%;
+  cursor: pointer;
+  min-width: 170px;
+  height: 40px;
+  padding: 3px auto;
+  position: relative;
+  bottom: 10px;
+  background: #e8b320;
+  font-weight: bold;
+  border: 1px solid #e8b320;
+  border-radius: 4px;
+}
+
+.companies {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.companies__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 9px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+h1{
+  margin-top: 45px;
+}
+
+.companies__card:hover {
+  background: pink;
+}
+
+.comments{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.comments__card {
+  width: 34%;
+  height: 300px;
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  margin: 7px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #000;
+  border-top: 5px solid orange;
+}
+
+@media only screen and (max-width: 600px){
+/*
+  .companies {
+    overflow-x: scroll;
+  } */
+  .community__inf {
+    flex-direction: column;
+  }
+
+  .community__inf-card {
+    width: 90%;
+  }
+
+  .subscribe-cards {
+    flex-direction: column;
+  }
+  .subscribe {
+    width: 90%;
+    margin-top: 8px;
+    min-width: 80%;
+    height: 400px;
+  }
+
+  .subscribe p {
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.4rem;
+  }
+
+  .subscribe button {
+    width: 170px;
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+  .plan {
+    width: 90%;
+  }
+}
