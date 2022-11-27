@@ -45,9 +45,8 @@ const Signup = (props) => {
 		else
 			setPasswordColor('salmon');
 	}
-	const onSubmitHandler = (event) => {
+	async function onSubmitHandler(event){
 		event.preventDefault();
-
 		const userData =  {
 			username: enteredUsername,
 			email: enteredEmail,
@@ -55,7 +54,15 @@ const Signup = (props) => {
 			confirmPassword: enteredConfirmPassword
 		}
 
-		props.onAddUser(userData);
+		 const response = await fetch('127.0.0.1:8000/api-auth/register', {
+			method: 'POST',
+			body: JSON.stringify(userData),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+		const data = await response.json();
+		console.log(data);
 
 	}
 	return(

@@ -1,0 +1,57 @@
+.plans {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plan {
+  width: 34%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.plan:hover {
+  box-shadow: 3px 3px 3px #ddd;
+}
+
+
+.plan h2 {
+  position: relative;
+  top: 20px;
+  padding: 5px 20px;
+  background: #e8b320;
+}
+
+.plan ul {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  width: 90%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.plan button {
+  width: 40%;
+  cursor: pointer;
+  min-width: 170px;
+  height: 40px;
+  padding: 3px auto;
+  position: relative;
+  bottom: 10px;
+  background: #e8b320;
+  font-weight: bold;
+  border: 1px solid #e8b320;
+  border-radius: 4px;
+}

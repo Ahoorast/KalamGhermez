@@ -11,8 +11,11 @@ const Header = () => {
           <ul>
             <li><Link to="/products" className="header__nav-left-links">Products</Link></li>
             <li><Link to="/heros" className="header__nav-left-links">Heros</Link></li>
-            <li><Link to="/lastquestion" className="header__nav-left-links">Last Questuions</Link></li>
+            <li><Link to="/lastquestion" className="header__nav-left-links">LQ</Link></li>
             <li><Link to="/about" className="header__nav-left-links">About</Link></li>
+            <li><Link to="/articles" className="header__nav-left-links">Articles</Link></li>
+            <li><Link to="/articles" className="header__nav-left-links">Teams</Link></li>
+
           </ul>
         </div>
       </div>

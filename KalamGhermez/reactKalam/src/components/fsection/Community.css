@@ -1,0 +1,39 @@
+.community__inf {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.community__inf-card {
+  width: 22%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 3px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.community__inf-card:hover {
+  background: blue;
+}
+
+
+@media only screen and (max-width: 600px){
+  .community__inf {
+    flex-direction: column;
+  }
+
+  .community__inf-card {
+    width: 90%;
+  }
+
+}

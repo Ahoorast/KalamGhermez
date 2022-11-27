@@ -1,0 +1,42 @@
+
+.newfeatures {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #fff;
+  color: #000;
+}
+
+.newfeatures__card {
+  width: 34%;
+  margin: 20px;
+  height: 440px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+.newfeatures__card button {
+  height: 40px;
+  width: 40%;
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.newfeatures__title{
+  margin-top: 320px;
+  background: #fff;
+  height: 100%;
+}

@@ -1,0 +1,29 @@
+.companies {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 320px;
+}
+
+.companies__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 9px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.comments__title{
+  margin-top: 45px;
+  z-index: 3;
+  color: #000;
+}
+
+.companies__card:hover {
+  background: pink;
+}

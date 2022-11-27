@@ -1,0 +1,100 @@
+.subscribe-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.subscribe {
+  margin-top: 12px;
+  margin-right: 6px;
+  width: 40%;
+  min-width: 350px;
+  height: 500px;
+  border: 1px solid #43ace6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: linear-gradient(#43ace6, #ddd);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title__special {
+  color: orange;
+}
+
+.subscribe p {
+  width: 70%;
+  height: 70%;
+  font-size: 25px;
+  line-height: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+}
+
+
+
+.subscribe button {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  padding: auto;
+  font-weight: bold;
+  color: #fff;
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+.subscribe.teams{
+  background: linear-gradient(#e8b320, #ddd);
+  border-color: #e8b320;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .subscribe-cards {
+    flex-direction: column;
+  }
+  .subscribe {
+    width: 90%;
+    margin-top: 8px;
+    min-width: 80%;
+    height: 400px;
+  }
+
+  .subscribe p {
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.4rem;
+  }
+
+  .subscribe button {
+    width: 170px;
+  }
+
+}
